@@ -22,6 +22,13 @@ import { ProductCreateComponent } from './components/product/product-create/prod
 import { RedDirective } from './directives/red.directive';
 import { ForDirective } from './directives/for.directive';
 
+import { HttpClientModule } from '@angular/common/http';
+
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ProductReadComponent } from './componets/product/product-read/product-read.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +39,8 @@ import { ForDirective } from './directives/for.directive';
     ProductCrudComponent,
     ProductCreateComponent,
     RedDirective,
-    ForDirective
+    ForDirective,
+    ProductReadComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +51,11 @@ import { ForDirective } from './directives/for.directive';
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
